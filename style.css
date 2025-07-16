@@ -1,0 +1,153 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: darkgray;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+.mainHeader {
+    text-align: center;
+    font-size: 2.5em;
+    color: darkred;
+    margin-top: 20px;
+}
+.turnTextRed {
+    display: none;
+    text-align: center;
+    color: red;
+    margin-bottom: 20px;
+}
+.turnTextBlue {
+    display: none;
+    text-align: center;
+    color: blue;
+    margin-bottom: 20px;
+}
+.gameContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 12px;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border: 12px solid black;
+}
+.row {
+    display: flex;
+    gap: 20px;
+}
+.col {
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.scoreBoard {
+    display: flex;
+    flex-direction: column;
+    color: yellow;
+    width: 450px;
+    font-size: 2rem;
+    margin: 12px;
+}
+.upperScore {
+    display: flex;
+    gap: 20px;
+    background-color: black;
+    text-decoration: underline;
+    font-weight: bold;
+}
+.lowerScore {
+    display: flex;
+    gap: 20px;
+    background-color: black;
+}
+.upperScore *, .lowerScore * {
+    width: 150px;
+}
+.scoreText {
+    font-weight: bold;
+}
+.redScoreText {
+    margin-left: 3rem;
+}
+.blueScoreText {
+    margin-left: 2rem;
+}
+.red {
+    background-color: red;
+}
+.blue {
+    background-color: blue;
+}
+
+.playOverlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    color: white;
+    opacity: 0.75;
+}
+.upperPlay {
+    font-size: 48px;
+    font-weight: bold;
+}
+.lowerPlay {
+    background-color: gray;
+    padding: 16px;
+    width: 20%;
+    text-align: center;
+    color: black;
+    font-size: 48px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.restartOverlay {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    color: white;
+    opacity: 0.75;
+}
+.upperRestart {
+    font-size: 48px;
+    font-weight: bold;
+}
+.lowerRestart {
+    padding: 16px;
+    text-align: center;
+    color: black;
+    font-size: 48px;
+    font-weight: bold;
+    display: flex;
+    gap: 48px;
+}
+.playAgain, .restartGame {
+    cursor: pointer;
+    background-color: gray;
+    padding: 16px;
+}
