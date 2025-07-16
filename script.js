@@ -114,10 +114,13 @@ $(document).ready(() => {
         for(let indexRow = 0; indexRow < gameMap.length; indexRow++) {
             for(let indexCol = 0; indexCol < gameMap[indexRow].length; indexCol++) {
                 if(gameMap[indexRow][indexCol] === color && indexCol < gameMap[indexRow].length - 4) {
-                    return gameMap[indexRow].slice(indexCol, indexCol + 5).every(item => item === color);
+                    if(gameMap[indexRow].slice(indexCol, indexCol + 5).every(item => item === color)) {
+                        return true;
+                    } 
                 }
             }
         }
+        return false;
     }
     // Check columns for the given color
     function checkColumns(color) {
